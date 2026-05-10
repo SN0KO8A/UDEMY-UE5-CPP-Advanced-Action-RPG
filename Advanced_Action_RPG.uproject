@@ -7,7 +7,11 @@
 		{
 			"Name": "Advanced_Action_RPG",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"EnhancedInput"
+			]
 		}
 	],
 	"Plugins": [
