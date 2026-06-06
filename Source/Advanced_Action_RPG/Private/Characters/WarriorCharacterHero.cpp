@@ -37,6 +37,11 @@ AWarriorCharacterHero::AWarriorCharacterHero()
 	CharacterMovementComponent->BrakingDecelerationWalking = 2000.f;
 }
 
+void AWarriorCharacterHero::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+}
+
 void AWarriorCharacterHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	if (!ensureMsgf(InputConfigDataAsset, TEXT("InputConfigDataAsset is not set on %s. Please set it to a valid UDA_InputConfig asset."), *GetName()))

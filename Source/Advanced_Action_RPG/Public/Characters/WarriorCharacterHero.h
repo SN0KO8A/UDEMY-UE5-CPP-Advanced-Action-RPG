@@ -9,6 +9,7 @@
 class USpringArmComponent;
 class UCameraComponent;
 class UDA_InputConfig;
+
 struct FInputActionValue;
 
 UCLASS()
@@ -18,6 +19,10 @@ class ADVANCED_ACTION_RPG_API AWarriorCharacterHero : public AWarriorCharacterBa
 
 public:
 	AWarriorCharacterHero();
+
+	//~ Begin APawn Interface.
+	void PossessedBy(AController* NewController) override;
+	//~ End APawn Interface.
 
 protected:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
